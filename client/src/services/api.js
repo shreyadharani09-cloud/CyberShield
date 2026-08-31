@@ -1,7 +1,7 @@
 import axios from "axios";
 
-axios.create({
+const api = axios.create({
   baseURL: "https://cybershield-sax5.onrender.com/api"
-})
+});
 
 export default api;
