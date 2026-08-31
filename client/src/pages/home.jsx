@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 import Navbar from "../components/navbar";
-import NewsCard from "../components/NewsCard";
-import Stats from "../components/Stats";
+import NewsCard from "../components/newsCard";
+import Stats from "../components/stats";
 
 function Home() {
   const navigate = useNavigate();
