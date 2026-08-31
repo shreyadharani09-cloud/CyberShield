@@ -10,16 +10,16 @@ function App() {
     <Routes>
 
       {/* Main website - no login required */}
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<home />} />
 
       {/* Login */}
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<login />} />
 
       {/* Registration */}
-      <Route path="/register" element={<Register />} />
+      <Route path="/register" element={<register />} />
 
       {/* News details */}
-      <Route path="/news/:id" element={<NewsDetails />} />
+      <Route path="/news/:id" element={<newsDetails />} />
 
     </Routes>
   );
