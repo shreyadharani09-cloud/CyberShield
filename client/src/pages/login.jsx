@@ -31,7 +31,7 @@ function Login() {
 
       alert(res.data.message);
 
-      navigate("/home");
+      navigate("/");
 
     } catch (err) {
       alert(err.response?.data?.message || "Login Failed");

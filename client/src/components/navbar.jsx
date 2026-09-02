@@ -40,7 +40,7 @@ function Navbar() {
       {/* Navigation */}
       <div className="nav-links">
 
-        <Link to="/home">
+        <Link to="/">
           Home
         </Link>
 
