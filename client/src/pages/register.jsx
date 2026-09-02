@@ -49,9 +49,9 @@ function Register() {
 
       <div className="auth-box">
 
-        <h1>🛡️ CyberShield</h1>
+        
 
-        <h2>Get Cyber Alerts</h2>
+        <h2>🛡️ Get Cyber Alerts</h2>
 
         <p className="auth-subtitle">
           Enter your details to receive cybersecurity alerts
@@ -89,11 +89,18 @@ function Register() {
           </p>
         )}
 
-        <p className="auth-link">
-          <Link to="/">
-            ← Back to Home
-          </Link>
-        </p>
+       <p className="auth-link">
+  Already have an account?{" "}
+  <Link to="/login">
+    Login
+  </Link>
+</p>
+
+<p className="auth-link">
+  <Link to="/">
+    ← Back to Home
+  </Link>
+</p>
 
       </div>
 

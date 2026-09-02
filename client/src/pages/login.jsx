@@ -7,7 +7,6 @@ function Login() {
 
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -30,6 +29,8 @@ function Login() {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
+      alert(res.data.message);
+
       navigate("/home");
 
     } catch (err) {
@@ -42,13 +43,11 @@ function Login() {
   return (
     <div className="auth-page">
 
-      {/* Background decoration */}
       <div className="auth-glow glow-one"></div>
       <div className="auth-glow glow-two"></div>
 
       <div className="auth-card">
 
-        {/* Logo */}
         <div className="auth-logo">
           <div className="shield-icon">🛡️</div>
 
@@ -62,7 +61,7 @@ function Login() {
           <h2>Welcome Back</h2>
 
           <p>
-            Sign in to access personalized cybersecurity
+            Sign in to receive personalized cybersecurity
             alerts and protection insights.
           </p>
         </div>
@@ -77,29 +76,12 @@ function Login() {
             <input
               type="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Enter your registered email"
               value={formData.email}
               onChange={handleChange}
               required
             />
           </div>
-
-
-          <label>Password</label>
-
-          <div className="input-wrapper">
-            <span>🔒</span>
-
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
 
           <button
             type="submit"
@@ -111,11 +93,9 @@ function Login() {
 
         </form>
 
-
         <div className="auth-divider">
           <span>OR</span>
         </div>
-
 
         <div className="guest-access">
 
@@ -131,7 +111,6 @@ function Login() {
           </div>
 
         </div>
-
 
         <p className="register-text">
           Don't have an account?{" "}
