@@ -55,6 +55,7 @@ function NewsCard({ news }) {
 
     </div>
   );
+  
 }
 
 export default NewsCard;

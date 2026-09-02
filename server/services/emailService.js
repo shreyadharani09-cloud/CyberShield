@@ -84,7 +84,7 @@ const sendCyberAlert = async (userEmail, news) => {
                         <div style="text-align: center; margin-top: 30px;">
 
                             <a
-                              href="http://192.168.1.9:5173/news/${news._id}"
+                              href="http://https://cybershield-client1.onrender.com/news/${news._id}"
                                 style="
                                     display: inline-block;
                                     padding: 13px 25px;

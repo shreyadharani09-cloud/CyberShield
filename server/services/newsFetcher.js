@@ -67,7 +67,9 @@ const news = new News({
    
     publishedAt: item.pubDate
 });            await news.save();
-const users = await User.find();
+const users = await User.find({
+    emailAlerts: true
+});
 
 for (const user of users) {
     await sendCyberAlert(user.email, news);
