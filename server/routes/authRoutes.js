@@ -58,13 +58,10 @@ router.post("/login", async (req, res) => {
                 message: "Email is required"
             });
         }
-const users = await User.find({
-    emailAlerts: true
-});
 
-for (const user of users) {
-    await sendCyberAlert(user.email, news);
-}
+        // Find registered user
+        const user = await User.findOne({ email });
+
         if (!user) {
             return res.status(400).json({
                 message: "User not found. Please register first."
