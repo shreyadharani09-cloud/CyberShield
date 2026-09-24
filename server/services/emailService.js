@@ -1,15 +1,8 @@
 const nodemailer = require("nodemailer");
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    requireTLS: true,
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD
-    }
-});
+const { Resend } = require("resend");
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const sendCyberAlert = async (userEmail, news) => {
     try {
@@ -127,7 +120,7 @@ const sendCyberAlert = async (userEmail, news) => {
             `
         };
 
-        await transporter.sendMail(mailOptions);
+        await resend.emails.send(mailOptions);
 
         console.log(`Cyber alert sent to ${userEmail}`);
 
