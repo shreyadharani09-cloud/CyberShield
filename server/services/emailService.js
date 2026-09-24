@@ -16,7 +16,7 @@ const sendCyberAlert = async (userEmail, news) => {
             : "Date not available";
 
         const mailOptions = {
-            from: `"CyberShield" <${process.env.EMAIL_USER}>`,
+            from: `"CyberShield" <${process.env.EMAIL_FROM}>`,
 
             to: userEmail,
 
